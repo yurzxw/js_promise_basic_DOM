@@ -1,4 +1,15 @@
 'use strict';
+const resolved = document.createElement('div');
+
+resolved.classList.add('message');
+resolved.textContent = 'Promise was resolved!';
+
+const rejected = document.createElement('div');
+
+rejected.classList.add('message');
+rejected.classList.add('message-error');
+rejected.textContent = 'Promise was rejected!';
+
 
 const logo = document.querySelector('.logo');
 const promise1 = new Promise((resolve, reject) => {
@@ -15,15 +26,6 @@ const promise2 = new Promise((resolve, reject) => {
   }, 3000);
 });
 
-const resolved = document.createElement('div');
 
-resolved.classList.add('message');
-resolved.textContent = 'Promice was resolved!';
-
-const rejected = document.createElement('div');
-
-rejected.classList.add('message');
-rejected.classList.add('message-error');
-rejected.textContent = 'Promice was rejected!';
 alert(promise1);
 alert(promise2);
